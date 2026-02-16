@@ -1,15 +1,12 @@
 import { useState } from 'react'
 
+import Header from "./component/Header.jsx";
+
 function App() {
-    const [count, setCount] = useState(0)
+    const appName = "Memory Card Game";
 
     return (
-        <>
-            <button onClick={ () => setCount(count + 1) }>
-                Increment count
-            </button>
-            <p>Count: { count }</p>
-        </>
+        <Header appName={ appName } />
     );
 }
 
