@@ -1,26 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function MainContent() {
-    const [cardData, setCardData] = useState();
-    
-    // Should be re-rendered with component if player restarts game
-    useEffect(function() {
-        // Generate random number for type (0 - 18)
-        const TYPE_ID = Math.floor(Math.random() * 19);
-
-        fetch("https://pokeapi.co/api/v2/type/" + TYPE_ID)
-            .then(function (response) {
-                if (response.status === 200) {
-                    return response.json()
-                }
-            }).then(function (data) {
-                if (data !== null) {
-                    console.log(data.pokemon);
-                }
-            }).catch(function (error) {
-                console.log(error);
-            });
-    }, []);
+    // Game type
+    // - Pokémon type
+    // - Pokémon subcategory (e.g., starter, legendary, baby)
 
     return (
         <main>
@@ -29,6 +12,8 @@ function MainContent() {
             {/* How to play component */}
 
             {/* Scoreboard component */}
+
+            {/* Game type component (only active when game not in play) */}
 
             {/* Card component */}
         </main>
