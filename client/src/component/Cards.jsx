@@ -1,3 +1,5 @@
+import "../styles/Cards.css"
+
 import { useEffect, useState } from "react";
 
 import Card from "./Card.jsx";
@@ -7,7 +9,7 @@ function Cards({ isInPlay, setIsInPlay }) {
     const [cardListData, setCardListData] = useState([]);
     const [typeId, setTypeId] = useState(1);
 
-    const NUMBER_OF_CARDS = 16;
+    const NUMBER_OF_CARDS = 15;
     
     useEffect(function() {
         const TYPE_ID = Math.floor(Math.random() * 18) + 1;
@@ -31,7 +33,7 @@ function Cards({ isInPlay, setIsInPlay }) {
     }, []);
 
     return (
-        <article>
+        <article className={ "cards" }>
             { cardListData
                 ? (
                     cardListData.map(function (cardData) {

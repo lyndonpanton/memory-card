@@ -1,3 +1,5 @@
+import "../styles/Card.css";
+
 function Card(props) {
     // const [isChosen, setIsChosen] = useState(false);
 
@@ -5,7 +7,7 @@ function Card(props) {
         <article className="card" key={ props.cardData.id }>
             <img src={ props.cardData.spriteUrl }
                 alt={"The pokémon " + props.cardData.name }
-                className={ "card-image" }/>
+                className={ "card-sprite" }/>
             <p className={ "card-name" }>{ props.cardData.name }</p>
         </article>
     );
