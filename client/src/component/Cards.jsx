@@ -24,7 +24,7 @@ function Cards({ isInPlay, setIsInPlay }) {
                     );
                     
                     for (let i = 0; i < filteredData.length; i++) {
-                        console.log(filteredData[i]);
+                        // console.log(filteredData[i]);
                     }
 
                     setCardListData(filteredData);
@@ -57,8 +57,6 @@ function Cards({ isInPlay, setIsInPlay }) {
 async function filterCardData(pokemon, numberOfCards) {
     let indexArray = [];
 
-    console.log(pokemon.length);
-
     for (let i = 0; i < pokemon.length; i++) {
         // Filter to only include generation I to V
         indexArray[i] = i;
@@ -75,6 +73,18 @@ async function filterCardData(pokemon, numberOfCards) {
                 await getCardData(pokemon[index].pokemon.url);
 
         if (newPokemonData.id > 609) continue;
+
+        let duplicatePokemon = false;
+
+        for (let i = 0; i < filteredPokemon.length; i++) {
+            if (newPokemonData.id === filteredPokemon[i].id)
+            {
+                duplicatePokemon = true;
+                break;
+            }
+        }
+
+        if (duplicatePokemon) continue;
 
         filteredPokemon.push(newPokemonData);
         indexArray.splice(index, 1);
@@ -94,7 +104,6 @@ async function getCardData(url) {
     }
 
     const result = await response.json();
-    console.log(result);
 
     cardData = {
         id: result.id,
