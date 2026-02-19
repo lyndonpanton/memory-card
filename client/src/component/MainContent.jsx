@@ -10,8 +10,6 @@ function MainContent() {
 
     return (
         <main>
-            <h2>Pokémon Memory Card Game</h2>
-
             {/* How to play component */}
 
             {/* Scoreboard component */}
