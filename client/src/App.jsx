@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import "./styles/App.css";
 
 import Header from "./component/Header.jsx";
 import MainContent from "./component/MainContent.jsx";
