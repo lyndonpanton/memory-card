@@ -1,3 +1,5 @@
+import "../styles/DataLinks.css";
+
 function DataLinks(props) {
     return (
         <section>

@@ -1,3 +1,5 @@
+import "../styles/ProjectLinks.css";
+
 function ProjectLinks(props) {
     return (
         <section>
