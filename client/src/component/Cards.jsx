@@ -22,10 +22,6 @@ function Cards({ isInPlay, setIsInPlay }) {
                     const filteredData = await filterCardData(
                         data.pokemon, NUMBER_OF_CARDS
                     );
-                    
-                    for (let i = 0; i < filteredData.length; i++) {
-                        // console.log(filteredData[i]);
-                    }
 
                     setCardListData(filteredData);
                 }
@@ -40,10 +36,13 @@ function Cards({ isInPlay, setIsInPlay }) {
                 ? (
                     cardListData.map(function (cardData) {
                         return (
-                            <article key={ crypto.randomUUID() }>
-                                <p>Name: { cardData.name }</p>
+                            <article className="card" key={ cardData.id }>
                                 <img src={ cardData.spriteUrl }
-                                    alt={"The pokémon" + cardData.name } />
+                                    alt={"The pokémon " + cardData.name }
+                                    className={ "card-image" }/>
+                                <p className={ "card-name" }>
+                                    Name: { cardData.name }
+                                </p>
                             </article>
                         );
                     })
