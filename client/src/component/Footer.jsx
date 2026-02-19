@@ -1,7 +1,11 @@
+import ProjectLinks from "./ProjectLinks.jsx";
+import DataLinks from "./DataLinks.jsx";
+import Copyright from "./Copyright.jsx";
+
 function Footer() {
-    const YEAR = new Date().getFullYear();
-    const RIGHTS_HOLDER = "Lyndon Mykal Panton";
-    const RIGHTS_TYPE = "All Rights Reserved";
+    const COPYRIGHT_YEAR = new Date().getFullYear();
+    const COPYRIGHT_RIGHTS_HOLDER = "Lyndon Mykal Panton";
+    const COPYRIGHT_RIGHTS_TYPE = "All Rights Reserved";
 
     return (
         <footer>
@@ -11,7 +15,10 @@ function Footer() {
             <article>
                 ...data links
             </article>
-            <p>&copy; { YEAR } { RIGHTS_HOLDER } | { RIGHTS_TYPE }</p>
+            <Copyright
+                year={ COPYRIGHT_YEAR }
+                rightsHolder={ COPYRIGHT_RIGHTS_HOLDER }
+                rightsType={ COPYRIGHT_RIGHTS_TYPE } />
         </footer>
     );
 }
