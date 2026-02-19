@@ -68,3 +68,5 @@ previously
 - [PokéAPI (project data)](https://pokeapi.co/)
 
 ## References
+
+- [Run code in react before render | Dave ceddia](https://daveceddia.com/react-before-render/)

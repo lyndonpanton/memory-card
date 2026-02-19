@@ -17,30 +17,17 @@ function Cards({ isInPlay, setIsInPlay }) {
                 if (response.status === 200) {
                     return response.json()
                 }
-            }).then(function (data) {
+            }).then(async function (data) {
                 if (data !== null) {
-                    let indexArray = [];
-
-                    for (let i = 0; i < data.pokemon.length; i++) {
-                        indexArray[i] = i;
+                    const filteredData = await filterCardData(
+                        data.pokemon, NUMBER_OF_CARDS
+                    );
+                    
+                    for (let i = 0; i < filteredData.length; i++) {
+                        console.log(filteredData[i]);
                     }
 
-                    // filter data.pokemon before setting state
-
-                    setCardListData(data.pokemon);
-
-                    // for (let i = 0; i < NUMBER_OF_CARDS; i++) {
-                    //     let index =
-                    //             Math.floor(Math.random() * indexArray.length);
-                    //     // const newCardData =
-                    //     //         getCardData(data.pokemon[index].pokemon.url);
-
-                    //     // setCardListData([...cardListData, newCardData]);
-                        
-                    //     // indexArray.splice(index, 1);
-
-                    //     setCardListData([...cardListData, data.pokemon]);
-                    // }
+                    setCardListData(filteredData);
                 }
             }).catch(function (error) {
                 console.log(error);
@@ -54,10 +41,11 @@ function Cards({ isInPlay, setIsInPlay }) {
                     cardListData.map(function (cardData) {
                         return (
                             <article key={ crypto.randomUUID() }>
-                                <p>Name: { cardData.pokemon.name }</p>
-                                <p>Url: { cardData.pokemon.url }</p>
+                                <p>Name: { cardData.name }</p>
+                                <img src={ cardData.spriteUrl }
+                                    alt={"The pokémon" + cardData.name } />
                             </article>
-                        )
+                        );
                     })
                 )
                 : <p>Loading...</p>
@@ -66,29 +54,48 @@ function Cards({ isInPlay, setIsInPlay }) {
     );
 }
 
-function getCardData(url) {
+async function filterCardData(pokemon, numberOfCards) {
+    let indexArray = [];
+
+    for (let i = 0; i < pokemon.length; i++) {
+        // Filter to only include generation I to V
+        indexArray[i] = i;
+    }
+
+    let filteredPokemon = [];
+
+    for (let i = 0; i < numberOfCards; i++) {
+        let index =
+                Math.floor(Math.random() * indexArray.length);
+        let newPokemonData =
+                await getCardData(pokemon[index].pokemon.url);
+
+        filteredPokemon.push(newPokemonData);
+        
+        indexArray.splice(index, 1);
+    }
+
+    return filteredPokemon;
+}
+
+async function getCardData(url) {
     let cardData;
 
-    fetch(url)
-        .then(function (response) {
-            if (response.status === 200) {
-                return response.json();
-            }
-        }).then(function (data) {
-            if (data !== null) {
-                cardData = {
-                        id: data.id,
-                        name: data.species.name[0].toUpperCase()
-                                + data.species.name.slice(1),
-                        spriteUrl: data.sprites.back_default
-                };
+    const response = await fetch(url);
 
-                console.log(cardData);
-                return cardData;
-            }
-        }).catch(function (error) {
-            console.log(error);
-        });
+    if (!response.ok) {
+        throw new Error("Response failed: " + response.status);
+    }
+
+    const result = await response.json();
+
+    cardData = {
+        id: result.id,
+        name: result.species.name[0].toUpperCase()
+                + result.species.name.slice(1),
+        spriteUrl: result.sprites.front_default
+    };
+
     return cardData;
 }
 
