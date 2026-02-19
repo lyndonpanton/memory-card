@@ -35,16 +35,7 @@ function Cards({ isInPlay, setIsInPlay }) {
             { cardListData
                 ? (
                     cardListData.map(function (cardData) {
-                        return (
-                            <article className="card" key={ cardData.id }>
-                                <img src={ cardData.spriteUrl }
-                                    alt={"The pokémon " + cardData.name }
-                                    className={ "card-image" }/>
-                                <p className={ "card-name" }>
-                                    Name: { cardData.name }
-                                </p>
-                            </article>
-                        );
+                        return <Card cardData={ cardData } />;
                     })
                 )
                 : <p>Loading...</p>

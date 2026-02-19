@@ -1,15 +1,12 @@
-import { useEffect, useState } from "react";
-
 function Card(props) {
-    const [isChosen, setIsChosen] = useState(false);
-
-    useEffect(function () {
-
-    }, []);
+    // const [isChosen, setIsChosen] = useState(false);
 
     return (
-        <article>
-
+        <article className="card" key={ props.cardData.id }>
+            <img src={ props.cardData.spriteUrl }
+                alt={"The pokémon " + props.cardData.name }
+                className={ "card-image" }/>
+            <p className={ "card-name" }>{ props.cardData.name }</p>
         </article>
     );
 }
