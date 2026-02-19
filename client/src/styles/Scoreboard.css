@@ -1,0 +1,36 @@
+.scoreboard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 20%;
+
+    margin: 0 auto;
+    border: 4px solid steelblue;
+    padding: 20px 60px;
+    max-width: 80%;
+
+    background-color: darkblue;
+
+    font-size: 2.5rem;
+}
+
+.scoreboard-score-current {
+    margin: 0;
+    padding: 0;
+}
+
+.scoreboard-score-high {
+    margin: 0;
+    padding: 0;
+}
+
+.scoreboard-score-current-number {
+    margin: 0;
+    padding: 0;
+}
+
+.scoreboard-score-high-number {
+    margin: 0;
+    padding: 0;
+}

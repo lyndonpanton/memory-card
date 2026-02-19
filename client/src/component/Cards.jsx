@@ -40,7 +40,7 @@ function Cards({ isInPlay, setIsInPlay }) {
                         return <Card cardData={ cardData } />;
                     })
                 )
-                : <p>Loading...</p>
+                : <p className={ "cards-loading" }>Loading...</p>
             }
         </article>
     );
