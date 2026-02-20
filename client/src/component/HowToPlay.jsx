@@ -1,3 +1,5 @@
+import "../styles/HowToPlay.css";
+
 function HowToPlay() {
     return (
         <section className={ "how-to-play" }>
@@ -10,7 +12,7 @@ function HowToPlay() {
                 for every card you pick that has not been picked before. To win
                 the game, you must pick fifteen unique cards in a row. If you
                 pick a card that has already been chosen before in the same
-                game, you lose the game, and can restart to try again.
+                game, you lose the game.
             </p>
         </section>
     );
