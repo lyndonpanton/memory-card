@@ -34,6 +34,25 @@ function Cards({ isInPlay, setIsInPlay }) {
             });
     }, []);
 
+    function shuffleCards() {
+        let newCardOrder = [];
+        let oldCardOrder = [...cardListData];
+        let indexArray = [];
+
+        for (let i = 0; i < cardListData.length; i++) {
+            indexArray[i] = i;
+        }
+
+        for (let i = 0; i < indexArray.length; i++) {
+            let index = Math.floor(Math.random() * oldCardOrder.length);
+
+            newCardOrder.push(oldCardOrder[index]);
+            oldCardOrder.splice(index, 1);
+        }
+
+        setCardListData(newCardOrder);
+    }
+
     return (
         <article className={ "cards" }>
             { cardListData
@@ -44,7 +63,8 @@ function Cards({ isInPlay, setIsInPlay }) {
                                 isInPlay={ isInPlay }
                                 setIsInPlay={ setIsInPlay }
                                 isActive={ isActive }
-                                setIsActive={ setIsActive } />;
+                                setIsActive={ setIsActive }
+                                shuffleCards={ shuffleCards } />;
                     })
                 )
                 : <p className={ "cards-loading" }>Loading...</p>

@@ -2,7 +2,14 @@ import "../styles/Card.css";
 
 import { useState } from "react";
 
-function Card({ cardData, isInPlay, setIsInPlay, isActive, setIsActive }) {
+function Card({
+    cardData,
+    isInPlay,
+    setIsInPlay,
+    isActive,
+    setIsActive,
+    shuffleCards
+}) {
     const [isChosen, setIsChosen] = useState(false);
 
     function handleCardClick(e) {
@@ -11,26 +18,29 @@ function Card({ cardData, isInPlay, setIsInPlay, isActive, setIsActive }) {
                 // game over
                 setIsInPlay(false);
             } else {
-                if (!isActive) {
-                    setIsChosen(true);
+                // if (isActive) {
+                setIsChosen(true);
 
-                    let id;
+                let id;
 
-                    if (e.target.tagName === "ARTICLE") {
-                        id = e.target.getAttribute("dataid");
-                        e.target.classList.add("card-selected");
-                    } else {
-                        id = e.target.parentElement.getAttribute("dataid");
-                        e.target.parentElement.classList.add("card-selected");
-                    }
-
-                    // shuffle cards after 1.75 seconds...
-                    setIsActive(true);
-
-                    setTimeout(resetIsActive, 1750);
-
-                    console.log(id);
+                if (e.target.tagName === "ARTICLE") {
+                    id = e.target.getAttribute("dataid");
+                    // e.target.classList.add("card-selected");
+                } else {
+                    id = e.target.parentElement.getAttribute("dataid");
+                    // e.target.parentElement.classList.add("card-selected");
                 }
+
+                // shuffle cards after 1.75 seconds...
+                // setIsActive(false);
+                shuffleCards();
+
+                // setTimeout(() => { setIsActive(true); }, 1750);
+
+                // use id array in cards component to confirm whether this
+                // card has been picked before...
+
+                // }
             }
         }
     }
