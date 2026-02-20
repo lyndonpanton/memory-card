@@ -8,6 +8,7 @@ function Cards({ isInPlay, setIsInPlay }) {
     const [categoryData, setCategoryData] = useState([]);
     const [cardListData, setCardListData] = useState([]);
     const [typeId, setTypeId] = useState(1);
+    const [isActive, setIsActive] = useState(true);
 
     const NUMBER_OF_CARDS = 15;
     
@@ -26,6 +27,7 @@ function Cards({ isInPlay, setIsInPlay }) {
                     );
 
                     setCardListData(filteredData);
+                    setIsInPlay(true);
                 }
             }).catch(function (error) {
                 console.log(error);
@@ -37,7 +39,12 @@ function Cards({ isInPlay, setIsInPlay }) {
             { cardListData
                 ? (
                     cardListData.map(function (cardData) {
-                        return <Card cardData={ cardData } />;
+                        return <Card
+                                cardData={ cardData }
+                                isInPlay={ isInPlay }
+                                setIsInPlay={ setIsInPlay }
+                                isActive={ isActive }
+                                setIsActive={ setIsActive } />;
                     })
                 )
                 : <p className={ "cards-loading" }>Loading...</p>

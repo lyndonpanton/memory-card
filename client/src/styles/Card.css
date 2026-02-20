@@ -24,3 +24,15 @@
     font-size: 1.5rem;
     text-align: center;
 }
+
+.card-selected {
+    border-color: green;
+    background-color: darkgreen;
+
+    transition: all linear 1.25s;
+}
+
+.card-selected-repeat {
+    border-color: red;
+    background-color: darkred;
+}
