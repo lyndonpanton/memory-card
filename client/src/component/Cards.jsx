@@ -39,18 +39,23 @@ function Cards({ isInPlay, setIsInPlay }) {
         let oldCardOrder = [...cardListData];
         let indexArray = [];
 
-        for (let i = 0; i < cardListData.length; i++) {
-            indexArray[i] = i;
-        }
+        // for (let i = 0; i < cardListData.length; i++) {
+        //     indexArray[i] = i;
+        // }
 
-        for (let i = 0; i < indexArray.length; i++) {
-            let index = Math.floor(Math.random() * oldCardOrder.length);
+        // for (let i = 0; i < indexArray.length; i++) {
+        //     let index = Math.floor(Math.random() * indexArray.length);
 
-            newCardOrder.push(oldCardOrder[index]);
-            oldCardOrder.splice(index, 1);
-        }
+        //     newCardOrder.push(oldCardOrder[index]);
+        //     oldCardOrder.splice(index, 1);
+        //     // indexArray.splice(index, 1);
+        // }
 
-        setCardListData(newCardOrder);
+        oldCardOrder.sort(function (a, b) {
+            return Math.random() - 0.5;
+        });
+
+        setCardListData(oldCardOrder);
     }
 
     return (
