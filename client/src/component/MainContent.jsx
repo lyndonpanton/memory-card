@@ -1,7 +1,8 @@
 import { useState } from "react";
 
-import Cards from "./Cards.jsx";
+import HowToPlay from "./HowToPlay.jsx";
 import Scoreboard from "./Scoreboard.jsx"
+import Cards from "./Cards.jsx";
 
 function MainContent() {
     // Game type
@@ -14,7 +15,7 @@ function MainContent() {
 
     return (
         <main>
-            {/* How to play component */}
+            <HowToPlay />
 
             <Scoreboard
                     currentScore={ currentScore }
