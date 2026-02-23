@@ -1,4 +1,4 @@
-import { useState } from "react";
+import "../styles/Reset.css";
 
 function Reset({
     setIsInPlay,
@@ -15,14 +15,23 @@ function Reset({
 
     function resetGameData() {
         restartGame();
+
         setShouldReset(true);
         setHighScore(0);
     }
 
     return (
-        <article>
-            <button onClick={ restartGame }>Restart Game</button>
-            <button onClick={ resetGameData }>Reset Game Data</button>
+        <article className={ "reset" }>
+            <button
+                    className={ "button restart-button" }
+                    onClick={ restartGame }>
+                Restart Game
+            </button>
+            <button
+                    className={ "button reset-button" }
+                    onClick={ resetGameData }>
+                Reset Game Data
+            </button>
         </article>
     );
 }

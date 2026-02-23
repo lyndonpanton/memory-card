@@ -22,9 +22,15 @@
 
 ### Routing
 
+### Effects
+
+#### Audio Effects
+
+#### Visual Effects
+
 ### Bugs
 
-- [ ] Selecting a Card in the same position as a previously selected Card causes
+- [x] Selecting a Card in the same position as a previously selected Card causes
 the game to be over, instead of select a Card that is the same (e.g., name,
 image) as a previously selected card
     - **Needed to set the key of the Card components in map**
