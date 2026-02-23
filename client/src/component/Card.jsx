@@ -8,6 +8,10 @@ function Card({
     setIsInPlay,
     isActive,
     setIsActive,
+    currentScore,
+    setCurrentScore,
+    highScore,
+    setHighScore,
     shuffleCards
 }) {
     const [isChosen, setIsChosen] = useState(false);
@@ -30,6 +34,12 @@ function Card({
                     id = e.target.parentElement.getAttribute("dataid");
                     // e.target.parentElement.classList.add("card-selected");
                 }
+
+                if (currentScore + 1 > highScore) {
+                    setHighScore(currentScore + 1);
+                }
+
+                setCurrentScore(currentScore + 1);
 
                 // shuffle cards after 1.75 seconds...
                 // setIsActive(false);

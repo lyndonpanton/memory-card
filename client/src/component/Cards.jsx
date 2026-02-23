@@ -4,7 +4,14 @@ import { useEffect, useState } from "react";
 
 import Card from "./Card.jsx";
 
-function Cards({ isInPlay, setIsInPlay }) {
+function Cards({
+    isInPlay,
+    setIsInPlay,
+    currentScore,
+    setCurrentScore,
+    highScore,
+    setHighScore
+}) {
     const [categoryData, setCategoryData] = useState([]);
     const [cardListData, setCardListData] = useState([]);
     const [typeId, setTypeId] = useState(1);
@@ -70,6 +77,10 @@ function Cards({ isInPlay, setIsInPlay }) {
                                 setIsInPlay={ setIsInPlay }
                                 isActive={ isActive }
                                 setIsActive={ setIsActive }
+                                currentScore={ currentScore }
+                                setCurrentScore={ setCurrentScore }
+                                highScore={ highScore }
+                                setHighScore={ setHighScore }
                                 shuffleCards={ shuffleCards } />;
                     })
                 )
