@@ -51,7 +51,7 @@ function Cards({ isInPlay, setIsInPlay }) {
         //     // indexArray.splice(index, 1);
         // }
 
-        oldCardOrder.sort(function (a, b) {
+        oldCardOrder.sort(function () {
             return Math.random() - 0.5;
         });
 
@@ -64,6 +64,7 @@ function Cards({ isInPlay, setIsInPlay }) {
                 ? (
                     cardListData.map(function (cardData) {
                         return <Card
+                                key={ cardData.id }
                                 cardData={ cardData }
                                 isInPlay={ isInPlay }
                                 setIsInPlay={ setIsInPlay }
