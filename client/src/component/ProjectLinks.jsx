@@ -6,13 +6,13 @@ function ProjectLinks(props) {
             {
                 props.data.map(function (item) {
                     return (
-                        <ul>
+                        <ul key={ item.title }>
                             <li>{ item.title }</li>
                             
                             {
                                 item.data.map(function (item) {
                                     return (
-                                        <li>
+                                        <li key={ item.title }>
                                             <a href={ item.link }>{ item.title }</a>
                                         </li>
                                     );

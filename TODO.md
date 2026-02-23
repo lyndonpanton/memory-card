@@ -16,6 +16,13 @@
 
 ### Content
 
+- [ ] Dialogue component
+    - [ ] If game is over
+        - [ ] Losing card name
+        - [ ] Summary of selections
+    - [ ] If game has been won
+        - [ ] Summary of selections
+
 ### Styling
 
 ### Functionality
@@ -26,7 +33,15 @@
 
 #### Audio Effects
 
+- [ ] Correct answer sound effect
+- [ ] Incorrect answer sound effect
+
 #### Visual Effects
+
+- [ ] Background colour and border colour of a card temporarily changes when it
+is correctly selected
+- [ ] Background colour and border colour of a card permenantly changes when it
+is incorrectly selected
 
 ### Bugs
 

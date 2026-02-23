@@ -12,7 +12,9 @@ function Card({
     setCurrentScore,
     highScore,
     setHighScore,
-    shuffleCards
+    shuffleCards,
+    gameSummary,
+    setGameSummary
 }) {
     const [isChosen, setIsChosen] = useState(false);
 
@@ -40,6 +42,7 @@ function Card({
                 }
 
                 setCurrentScore(currentScore + 1);
+                setGameSummary([...gameSummary, cardData.name]);
 
                 // shuffle cards after 1.75 seconds...
                 // setIsActive(false);

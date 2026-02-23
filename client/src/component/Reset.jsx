@@ -5,7 +5,9 @@ function Reset({
     setCurrentScore,
     setHighScore,
     setShouldRestart,
-    setShouldReset
+    setShouldReset,
+    gameSummary,
+    setGameSummary
 }) {
     function restartGame() {
         setShouldRestart(true);
@@ -18,6 +20,9 @@ function Reset({
 
         setShouldReset(true);
         setHighScore(0);
+        
+        console.log(gameSummary);
+        setGameSummary([]);
     }
 
     return (

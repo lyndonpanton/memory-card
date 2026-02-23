@@ -14,7 +14,9 @@ function Cards({
     shouldRestart,
     setShouldRestart,
     shouldReset,
-    setShouldReset
+    setShouldReset,
+    gameSummary,
+    setGameSummary
 }) {
     const [categoryData, setCategoryData] = useState([]);
     const [cardListData, setCardListData] = useState([]);
@@ -166,7 +168,9 @@ function Cards({
                                 setCurrentScore={ setCurrentScore }
                                 highScore={ highScore }
                                 setHighScore={ setHighScore }
-                                shuffleCards={ shuffleCards } />;
+                                shuffleCards={ shuffleCards }
+                                gameSummary={ gameSummary }
+                                setGameSummary={ setGameSummary } />;
                     })
                 )
                 : <p className={ "cards-loading" }>Loading...</p>

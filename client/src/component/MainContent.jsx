@@ -15,6 +15,7 @@ function MainContent() {
     const [currentScore, setCurrentScore] = useState(0);
     // Use local storage
     const [highScore, setHighScore] = useState(0);
+    const [gameSummary, setGameSummary] = useState([]);
 
     return (
         <main>
@@ -36,7 +37,9 @@ function MainContent() {
                     shouldRestart={ shouldRestart }
                     setShouldRestart={ setShouldRestart }
                     shouldReset={ shouldReset }
-                    setShouldReset={ setShouldReset } />
+                    setShouldReset={ setShouldReset }
+                    gameSummary={ gameSummary }
+                    setGameSummary={ setGameSummary }/>
 
             <Reset
                 setIsInPlay={ setIsInPlay }
@@ -44,7 +47,9 @@ function MainContent() {
                 setHighScore={ setHighScore }
                 shouldRestart={ shouldRestart }
                 setShouldRestart={ setShouldRestart }
-                setShouldReset={ setShouldReset } />
+                setShouldReset={ setShouldReset }
+                gameSummary={ gameSummary }
+                setGameSummary={ setGameSummary } />
         </main>
     );
 }
