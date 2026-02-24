@@ -9,24 +9,36 @@ function DataLinks(props) {
         <section className={ "data-links" }>
             <ul className={ "data-links-legal data-links-list" }>
                 <li className={ "data-links-item" }>
-                    <a className={ "data-links-link" }>
+                    <a
+                            className={ "data-links-link" }
+                            href={ "https://en.wikipedia.org/wiki/Privacy_policy" }
+                            target={ "_blank" }>
                         Privacy Policy
                     </a>
                 </li>
-                <li className={ "data-links-item"}>
-                    <a className={ "data-links-link" }>
+                <li className={ "data-links-item" }>
+                    <a
+                            className={ "data-links-link" }
+                            href={ "https://en.wikipedia.org/wiki/HTTP_cookie" }
+                            target={ "_blank" }>
                         Cookies
                     </a>
                 </li>
                 <li className={ "data-links-item" }>
-                    <a className={ "data-links-link" }>
+                    <a
+                            className={ "data-links-link" }
+                            href={ "https://en.wikipedia.org/wiki/Contractual_term" }
+                            target={ "_blank" }>
                         Terms And Conditions
                     </a>
                 </li>
             </ul>
             <ul className={ "data-links-social data-links-list" }>
                 <li className={ "data-links-item" }>
-                    <a className={ "data-links-link " }>
+                    <a
+                            className={ "data-links-link " }
+                            href={ "https://twitter.com" }
+                            target={ "_blank" }>
                         <img
                                 className={ "data-links-icon" }
                                 src={ twitterIcon }
@@ -34,7 +46,10 @@ function DataLinks(props) {
                     </a>
                 </li>
                 <li className={ "data-links-item" }>
-                    <a className={ "data-links-link " }>
+                    <a
+                            className={ "data-links-link " }
+                            href={ "https://www.instagram.com/" }
+                            target={ "_blank" }>
                         <img
                                 className={ "data-links-icon" }
                                 src={ instagramIcon }
@@ -42,7 +57,10 @@ function DataLinks(props) {
                     </a>
                 </li>
                 <li className={ "data-links-item" }>
-                    <a className={ "data-links-link " }>
+                    <a
+                            className={ "data-links-link " }
+                            href={ "https://www.facebook.com/" }
+                            target={ "_blank" }>
                         <img
                                 className={ "data-links-icon" }
                                 src={ facebookIcon }
