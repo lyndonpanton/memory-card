@@ -1,26 +1,86 @@
 import "../styles/Dialog.css";
 
 function Dialog({ isInPlay, hasWon, hasLost, gameSummary }) {
-    let summary = "";
+    // let summary = <p className={ "dialog-summary" }></p>;
+    // let summary = document.createElement("p");
+    // summary.classList.add("dialog-summary");
+
+    // for (let i = 0; i < gameSummary.length; i++) {
+    //     let summaryItem = document.createElement("span");
+    //     summaryItem.classList.add("dialog-summary-item");
+        
+    //     if (i === gameSummary.length - 1) {
+    //         summaryItem.textContent = gameSummary[i];
+    //     } else {
+    //         summaryItem.textContent = gameSummary[i] + ", ";
+    //     }
+
+    //     summary.appendChild(summaryItem);
+    // }
+
+    let summary = [];
 
     for (let i = 0; i < gameSummary.length; i++) {
-        if (i === gameSummary.length - 1) {
-            summary += gameSummary[i];
-        } else {
-            summary += gameSummary[i] + ", ";
-        }
+        summary.push(gameSummary[i]);
     }
 
     return (
         isInPlay
             ? null
             : (
-                <article>
-                    <h3>{ hasWon ? "You Win" : "You Lose" }</h3>
-                    <p>Pick order: { summary }</p>
+                <article className={ "dialog" }>
+                    <h3 className={ "dialog-status" }>
+                        { hasWon ? "You Win" : "You Lose" }
+                    </h3>
+                    <span className={ "dialog-summary-heading" }>Pick Order: </span>
+                    {
+                        summary.map(function (pick, index) {
+                            if (index === summary.length - 1) {
+                                return (
+                                    hasWon
+                                    ?
+                                        <span>
+                                            <span className={ "dialog-summary-item dialog-summary-item-duplicate" }>
+                                                { pick }
+                                            </span>
+                                        </span>
+                                    :
+                                        <span>
+                                            <span className={ "dialog-summary-item" }>
+                                                { pick }
+                                            </span>
+                                        </span>
+                                );
+                            } else if (pick === summary[summary.length - 1]) {
+                                return (
+                                    hasWon
+                                    ?
+                                        <span>
+                                            <span className={ "dialog-summary-item dialog-summary-item-duplicate" }>
+                                                { pick }
+                                            </span>
+                                        </span>
+                                    :
+                                        <span>
+                                            <span className={ "dialog-summary-item" }>
+                                                { pick }
+                                            </span>
+                                        </span>
+                                );
+                            }
+
+                            return (
+                                <span>
+                                    <span className={ "dialog-summary-item" }>
+                                        { pick }
+                                    </span>
+                                    <span className={ "dialog-summary-item dialog-summary-item-dividier"}> &gt; </span>
+                                </span>
+                            );
+                        })
+                    }
                 </article>
             )
-
     );
 }
 
