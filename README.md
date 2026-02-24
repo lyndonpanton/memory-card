@@ -66,7 +66,10 @@ previously
 - [CV Application (repository)](https://github.com/lyndonpanton/cv-application)
 - [react .gitignore (facebook/react)](https://github.com/facebook/react/blob/main/.gitignore)
 - [PokéAPI (project data)](https://pokeapi.co/)
-- [Fontawesome (footer icons)]()
+- [Fontawesome (footer icons)](https://fontawesome.com/)
+    - [Twitter icon](https://fontawesome.com/icons/twitter?f=brands&s=solid)
+    - [Instagram icon](https://fontawesome.com/icons/square-instagram?f=brands&s=solid)
+    - [Facebook icon](https://fontawesome.com/icons/facebook?f=brands&s=solid)
 
 ## References
 
