@@ -17,6 +17,7 @@ function Reset({
         setHasWon(false);
         setHasLost(false);
         setCurrentScore(0);
+        setGameSummary([]);
     }
 
     function resetGameData() {
@@ -26,7 +27,6 @@ function Reset({
         setHighScore(0);
         
         console.log(gameSummary);
-        setGameSummary([]);
     }
 
     return (
