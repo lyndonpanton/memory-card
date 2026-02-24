@@ -2,18 +2,18 @@ import "../styles/ProjectLinks.css";
 
 function ProjectLinks(props) {
     return (
-        <section>
+        <section className={ "project-links" }>
             {
                 props.data.map(function (item) {
                     return (
-                        <ul key={ item.title }>
-                            <li>{ item.title }</li>
+                        <ul key={ item.title } className={ "project-link-list" }>
+                            <li className={ "project-link-list-title" }>{ item.title }</li>
                             
                             {
                                 item.data.map(function (item) {
                                     return (
-                                        <li key={ item.title }>
-                                            <a href={ item.link }>{ item.title }</a>
+                                        <li key={ item.title } className={ "project-link-list-item" }>
+                                            <a href={ item.link } className={ "project-link-list-link" }>{ item.title }</a>
                                         </li>
                                     );
                                 })

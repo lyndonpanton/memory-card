@@ -1,3 +1,5 @@
+import "../styles/Footer.css";
+
 import ProjectLinks from "./ProjectLinks.jsx";
 import DataLinks from "./DataLinks.jsx";
 import Copyright from "./Copyright.jsx";
