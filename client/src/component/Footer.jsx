@@ -5,7 +5,7 @@ import DataLinks from "./DataLinks.jsx";
 import Copyright from "./Copyright.jsx";
 
 function Footer() {
-    const PROJECT_DATA = [
+    const PROJECT_INFORMATION = [
         {
             title: "Developer Information",
             data: [
@@ -83,16 +83,15 @@ function Footer() {
             ]
         }
     ];
+
     const COPYRIGHT_YEAR = new Date().getFullYear();
     const COPYRIGHT_RIGHTS_HOLDER = "Lyndon Mykal Panton";
     const COPYRIGHT_RIGHTS_TYPE = "All Rights Reserved";
 
     return (
         <footer>
-            <ProjectLinks data={ PROJECT_DATA } />
-            <article>
-                ...data links
-            </article>
+            <ProjectLinks data={ PROJECT_INFORMATION } />
+            <DataLinks />
             <Copyright
                 year={ COPYRIGHT_YEAR }
                 rightsHolder={ COPYRIGHT_RIGHTS_HOLDER }
