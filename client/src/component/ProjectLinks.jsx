@@ -13,7 +13,12 @@ function ProjectLinks(props) {
                                 item.data.map(function (item) {
                                     return (
                                         <li key={ item.title } className={ "project-link-list-item" }>
-                                            <a href={ item.link } className={ "project-link-list-link" }>{ item.title }</a>
+                                            <a
+                                                    href={ item.link }
+                                                    target={ "_blank" }
+                                                    className={ "project-link-list-link" }>
+                                                { item.title }
+                                            </a>
                                         </li>
                                     );
                                 })
