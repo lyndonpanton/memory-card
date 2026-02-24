@@ -2,6 +2,8 @@ import "../styles/Reset.css";
 
 function Reset({
     setIsInPlay,
+    setHasWon,
+    setHasLost,
     setCurrentScore,
     setHighScore,
     setShouldRestart,
@@ -12,6 +14,8 @@ function Reset({
     function restartGame() {
         setShouldRestart(true);
         setIsInPlay(true);
+        setHasWon(false);
+        setHasLost(false);
         setCurrentScore(0);
     }
 

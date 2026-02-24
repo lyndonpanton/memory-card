@@ -3,6 +3,7 @@ import { useState } from "react";
 import HowToPlay from "./HowToPlay.jsx";
 import Scoreboard from "./Scoreboard.jsx"
 import Cards from "./Cards.jsx";
+import Dialog from "./Dialog.jsx";
 import Reset from "./Reset.jsx";
 
 function MainContent() {
@@ -10,6 +11,8 @@ function MainContent() {
     // - Pokémon type
     // - Pokémon subcategory (e.g., starter, legendary, baby)
     const [isInPlay, setIsInPlay] = useState(false);
+    const [hasWon, setHasWon] = useState(false);
+    const [hasLost, setHasLost] = useState(false);
     const [shouldRestart, setShouldRestart] = useState(false);
     const [shouldReset, setShouldReset] = useState(false);
     const [currentScore, setCurrentScore] = useState(0);
@@ -27,22 +30,35 @@ function MainContent() {
 
             {/* Game type component (only active when game not in play) */}
 
-            <Cards
-                    isInPlay={ isInPlay }
-                    setIsInPlay={ setIsInPlay }
-                    currentScore={ currentScore }
-                    setCurrentScore={ setCurrentScore }
-                    highScore={ highScore }
-                    setHighScore={ setHighScore }
-                    shouldRestart={ shouldRestart }
-                    setShouldRestart={ setShouldRestart }
-                    shouldReset={ shouldReset }
-                    setShouldReset={ setShouldReset }
-                    gameSummary={ gameSummary }
-                    setGameSummary={ setGameSummary }/>
+            <section id="game">
+                <Cards
+                        isInPlay={ isInPlay }
+                        setIsInPlay={ setIsInPlay }
+                        hasWon={ hasWon }
+                        setHasWon={ setHasWon }
+                        hasLost={ hasLost }
+                        setHasLost={ setHasLost }
+                        currentScore={ currentScore }
+                        setCurrentScore={ setCurrentScore }
+                        highScore={ highScore }
+                        setHighScore={ setHighScore }
+                        shouldRestart={ shouldRestart }
+                        setShouldRestart={ setShouldRestart }
+                        shouldReset={ shouldReset }
+                        setShouldReset={ setShouldReset }
+                        gameSummary={ gameSummary }
+                        setGameSummary={ setGameSummary }/>
+                <Dialog
+                        isInPlay={ isInPlay }
+                        hasWon={ hasWon }
+                        hasLost={ hasLost }
+                        gameSummary={ gameSummary } />
+            </section>
 
             <Reset
                 setIsInPlay={ setIsInPlay }
+                setHasWon={ setHasWon }
+                setHasLost={ setHasLost }
                 setCurrentScore={ setCurrentScore }
                 setHighScore={ setHighScore }
                 shouldRestart={ shouldRestart }

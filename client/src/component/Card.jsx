@@ -6,6 +6,8 @@ function Card({
     cardData,
     isInPlay,
     setIsInPlay,
+    setHasWon,
+    setHasLost,
     isActive,
     setIsActive,
     currentScore,
@@ -14,7 +16,8 @@ function Card({
     setHighScore,
     shuffleCards,
     gameSummary,
-    setGameSummary
+    setGameSummary,
+    numberOfCards
 }) {
     const [isChosen, setIsChosen] = useState(false);
 
@@ -23,6 +26,8 @@ function Card({
             if (isChosen) {
                 // game over
                 setIsInPlay(false);
+                setHasLost(true);
+                setGameSummary([...gameSummary, cardData.name]);
             } else {
                 // if (isActive) {
                 setIsChosen(true);
@@ -37,6 +42,15 @@ function Card({
                     // e.target.parentElement.classList.add("card-selected");
                 }
 
+                if (numberOfCards === currentScore + 1) {
+                    setIsInPlay(false);
+                    setHasWon(true);
+                }
+                else
+                {
+                    shuffleCards();
+                }
+
                 if (currentScore + 1 > highScore) {
                     setHighScore(currentScore + 1);
                 }
@@ -44,16 +58,9 @@ function Card({
                 setCurrentScore(currentScore + 1);
                 setGameSummary([...gameSummary, cardData.name]);
 
-                // shuffle cards after 1.75 seconds...
                 // setIsActive(false);
-                shuffleCards();
 
                 // setTimeout(() => { setIsActive(true); }, 1750);
-
-                // use id array in cards component to confirm whether this
-                // card has been picked before...
-
-                // }
             }
         }
     }

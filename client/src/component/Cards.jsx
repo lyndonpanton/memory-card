@@ -7,6 +7,10 @@ import Card from "./Card.jsx";
 function Cards({
     isInPlay,
     setIsInPlay,
+    hasWon,
+    setHasWon,
+    hasLost,
+    setHasLost,
     currentScore,
     setCurrentScore,
     highScore,
@@ -72,8 +76,7 @@ function Cards({
             let duplicatePokemon = false;
 
             for (let i = 0; i < filteredPokemon.length; i++) {
-                if (newPokemonData.id === filteredPokemon[i].id)
-                {
+                if (newPokemonData.id === filteredPokemon[i].id) {
                     duplicatePokemon = true;
                     break;
                 }
@@ -123,21 +126,7 @@ function Cards({
     }
 
     function shuffleCards() {
-        let newCardOrder = [];
         let oldCardOrder = [...cardListData];
-        let indexArray = [];
-
-        // for (let i = 0; i < cardListData.length; i++) {
-        //     indexArray[i] = i;
-        // }
-
-        // for (let i = 0; i < indexArray.length; i++) {
-        //     let index = Math.floor(Math.random() * indexArray.length);
-
-        //     newCardOrder.push(oldCardOrder[index]);
-        //     oldCardOrder.splice(index, 1);
-        //     // indexArray.splice(index, 1);
-        // }
 
         oldCardOrder.sort(function () {
             return Math.random() - 0.5;
@@ -162,6 +151,8 @@ function Cards({
                                 cardData={ cardData }
                                 isInPlay={ isInPlay }
                                 setIsInPlay={ setIsInPlay }
+                                setHasWon={ setHasWon }
+                                setHasLost={ setHasLost }
                                 isActive={ isActive }
                                 setIsActive={ setIsActive }
                                 currentScore={ currentScore }
@@ -170,7 +161,8 @@ function Cards({
                                 setHighScore={ setHighScore }
                                 shuffleCards={ shuffleCards }
                                 gameSummary={ gameSummary }
-                                setGameSummary={ setGameSummary } />;
+                                setGameSummary={ setGameSummary }
+                                numberOfCards={ NUMBER_OF_CARDS } />;
                     })
                 )
                 : <p className={ "cards-loading" }>Loading...</p>

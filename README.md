@@ -71,3 +71,4 @@ previously
 ## References
 
 - [Run code in react before render | Dave ceddia](https://daveceddia.com/react-before-render/)
+- [Cannot update a component while rendering a different component | Borislav hadzhiev](https://bobbyhadz.com/blog/react-cannot-update-component-while-rendering-different-component)
