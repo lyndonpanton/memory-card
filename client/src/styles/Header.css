@@ -7,6 +7,49 @@ h1 {
     margin: 0;
     padding: 0;
 
+    /* color: red; */
     font-size: 3rem;
     text-align: center;
+}
+
+/* Mobile */
+@media screen and (min-width: 320px) {
+    header {
+        margin: 0;
+        padding: 40px 0 0;
+    }
+
+    h1 {
+        margin: 0;
+        padding: 0;
+
+        font-size: 1.3rem;
+        text-align: center;
+    }
+}
+
+/* Laptop */
+@media screen and (min-width: 620px) {
+    
+}
+
+/* Desktop */
+@media screen and (min-width: 920px) {
+    
+}
+
+/* Destkop (Large) */
+@media screen and (min-width: 1220px) {
+    header {
+        margin: 0;
+        padding: 40px 0;
+    }
+
+    h1 {
+        margin: 0;
+        padding: 0;
+
+        font-size: 3rem;
+        text-align: center;
+    }
 }

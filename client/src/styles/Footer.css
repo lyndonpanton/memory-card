@@ -1,6 +1,31 @@
 footer {
-    margin: 60px 0 0;
-    border-top: 2px solid lightsteelblue;
-    padding: 40px 0 0;
+    border-top-color: lightsteelblue;
+    border-top-style: solid;
+    border-top-width: 2px;
 }
 
+/* Mobile */
+@media screen and (min-width: 320px) {
+    footer {
+        margin: 20px 0 0;
+
+    }
+}
+
+/* Laptop */
+@media screen and (min-width: 620px) {
+
+}
+
+/* Desktop */
+@media screen and (min-width: 920px) {
+
+}
+
+/* Destkop (Large) */
+@media screen and (min-width: 1220px) {
+    footer {
+        margin: 60px 0 0;
+        padding: 40px 0 0;
+    }
+}

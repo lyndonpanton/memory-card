@@ -1,10 +1,6 @@
 .card {
-    margin: 0;
-    border: 3px solid steelblue;
-    border-radius: 8px;
-    padding: 0;
-    min-width: 250px;
-    min-height: 230px;
+    border-color: steelblue;
+    border-style: solid;
 
     background-color: darkblue;
 }
@@ -14,7 +10,7 @@
 
     margin: 0 auto;
     padding: 0;
-    min-width: 70%;
+    /* min-width: 70%; */
 }
 
 .card-name {
@@ -35,4 +31,61 @@
 .card-selected-repeat {
     border-color: red;
     background-color: darkred;
+}
+
+/* Mobile */
+@media screen and (min-width: 320px) {
+    .card {
+        border-width: 2px;
+        min-width: 60px;
+        min-height: 60px;
+    }
+
+    .card-sprite {
+        width: 40px;
+    }
+
+    .card-name {
+        font-size: 0.6rem;
+    }
+}
+
+/* Laptop */
+@media screen and (min-width: 620px) {
+
+}
+
+/* Desktop */
+@media screen and (min-width: 920px) {
+
+}
+
+/* Destkop (Large) */
+@media screen and (min-width: 1220px) {
+    .card {
+        margin: 0;
+        border-width: 3px;
+        border-radius: 8px;
+        padding: 0;
+        min-width: 250px;
+        min-height: 230px;
+
+        background-color: darkblue;
+    }
+
+    .card-sprite {
+        display: block;
+
+        margin: 0 auto;
+        padding: 0;
+        min-width: 70%;
+    }
+
+    .card-name {
+        margin: 0;
+        padding: 0;
+
+        font-size: 1.5rem;
+        text-align: center;
+    }
 }

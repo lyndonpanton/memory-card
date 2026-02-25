@@ -2,18 +2,10 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 120px;
-
-    margin: 80px 0;
 }
 
 .button {
-    border-width: 4px;
     border-style: solid;
-    padding: 20px 60px;
-    max-width: 80%;
-    
-    font-size: 2.5rem;
 }
 
 .restart-button {
@@ -26,4 +18,47 @@
     border-color: #B40000;
 
     background-color: darkred;
+}
+
+/* Mobile */
+@media screen and (min-width: 320px) {
+    .reset {
+        gap: 20px;
+
+        margin: 20px;
+    }
+
+    .button {
+        border-width: 2px;
+        padding: 8px 12px;
+    }
+}
+
+/* Laptop */
+@media screen and (min-width: 620px) {
+
+}
+
+/* Desktop */
+@media screen and (min-width: 920px) {
+
+}
+
+/* Destkop (Large) */
+@media screen and (min-width: 1220px) {
+    .reset {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 120px;
+
+        margin: 80px 0;
+    }
+
+    .button {
+        border-width: 4px;
+        padding: 20px 60px;
+        
+        font-size: 2.5rem;
+    }
 }

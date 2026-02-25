@@ -25,6 +25,8 @@
 
 ### Styling
 
+- [ ] Change font family
+
 ### Functionality
 
 ### Routing
@@ -45,7 +47,7 @@ is incorrectly selected
 
 ### Maintenance
 
-- [ ] Render DataLinks component using the map function on the prop passed to
+- [x] Render DataLinks component using the map function on the prop passed to
 it
 
 ### Bugs

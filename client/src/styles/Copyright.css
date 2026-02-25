@@ -1,7 +1,6 @@
 .copyright {
-    padding: 20px 0 20px;
-
-    font-size: 1.8rem;
+    margin: 10px 0;
+    
     text-align: center;
 }
 
@@ -23,4 +22,32 @@
 
 .copyright-rights-type {
 
+}
+
+/* Mobile */
+@media screen and (min-width: 320px) {
+    .copyright {
+        padding: 10px 0;
+
+        font-size: 0.8rem;
+    }
+}
+
+/* Laptop */
+@media screen and (min-width: 700px) {
+
+}
+
+/* Desktop */
+@media screen and (min-width: 1000px) {
+
+}
+
+/* Destkop (Large) */
+@media screen and (min-width: 1300px) {
+    .copyright {
+        padding: 20px 0;
+
+        font-size: 1.8rem;
+    }
 }

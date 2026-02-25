@@ -3,8 +3,33 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 16px;
+}
 
-    margin: 60px auto;
-    max-width: 80%;
+/* Mobile */
+@media screen and (min-width: 320px) {
+    .cards {
+        gap: 4px;
+
+        margin: 0 auto;
+    }
+}
+
+/* Laptop */
+@media screen and (min-width: 620px) {
+
+}
+
+/* Desktop */
+@media screen and (min-width: 920px) {
+
+}
+
+/* Destkop (Large) */
+@media screen and (min-width: 1220px) {
+    .cards {
+        gap: 16px;
+
+        margin: 60px auto;
+        max-width: 80%;
+    }
 }
