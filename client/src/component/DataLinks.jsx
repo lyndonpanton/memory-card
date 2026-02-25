@@ -1,73 +1,40 @@
 import "../styles/DataLinks.css";
 
-import twitterIcon from "../asset/icon/twitter.svg";
-import instagramIcon from "../asset/icon/instagram.svg";
-import facebookIcon from "../asset/icon/facebook.svg";
-
-function DataLinks(props) {
+function DataLinks({ data }) {
     return (
         <section className={ "data-links" }>
-            <ul className={ "data-links-legal data-links-list" }>
-                <li className={ "data-links-item" }>
-                    <a
-                            className={ "data-links-link" }
-                            href={ "https://en.wikipedia.org/wiki/Privacy_policy" }
-                            target={ "_blank" }>
-                        Privacy Policy
-                    </a>
-                </li>
-                <li className={ "data-links-item" }>
-                    <a
-                            className={ "data-links-link" }
-                            href={ "https://en.wikipedia.org/wiki/HTTP_cookie" }
-                            target={ "_blank" }>
-                        Cookies
-                    </a>
-                </li>
-                <li className={ "data-links-item" }>
-                    <a
-                            className={ "data-links-link" }
-                            href={ "https://en.wikipedia.org/wiki/Contractual_term" }
-                            target={ "_blank" }>
-                        Terms And Conditions
-                    </a>
-                </li>
-            </ul>
-            <ul className={ "data-links-social data-links-list" }>
-                <li className={ "data-links-item" }>
-                    <a
-                            className={ "data-links-link " }
-                            href={ "https://twitter.com" }
-                            target={ "_blank" }>
-                        <img
-                                className={ "data-links-icon" }
-                                src={ twitterIcon }
-                                alt={ "Twitter logo" } />
-                    </a>
-                </li>
-                <li className={ "data-links-item" }>
-                    <a
-                            className={ "data-links-link " }
-                            href={ "https://www.instagram.com/" }
-                            target={ "_blank" }>
-                        <img
-                                className={ "data-links-icon" }
-                                src={ instagramIcon }
-                                alt={ "Instagram logo" } />
-                    </a>
-                </li>
-                <li className={ "data-links-item" }>
-                    <a
-                            className={ "data-links-link " }
-                            href={ "https://www.facebook.com/" }
-                            target={ "_blank" }>
-                        <img
-                                className={ "data-links-icon" }
-                                src={ facebookIcon }
-                                alt={ "Facebook logo" } />
-                    </a>
-                </li>
-            </ul>
+            {
+                data.map(function (group) {
+                    return (
+                        <ul
+                                key={ group.title }
+                                className={ "data-links-" + group.title + " " + "data-links-list"}>
+                            {
+                                group.data.map(function (website) {
+                                    return (
+                                        <li key={ website.title } className={ "data-links-item" }>
+                                            <a
+                                                    href={ website.link }
+                                                    target={ website.newTab ? "_blank" : "_self" }
+                                                    className={ "data-links-link" }>
+                                                
+                                                {
+                                                    website.usesIcon
+                                                        ? <img
+                                                                className={ "data-links-icon" }
+                                                                src={ website.icon }
+                                                                alt={ website.title } />
+                                                        : website.title
+                                                }
+                                            </a>
+                                        </li>
+                                    );
+                                })
+                            }
+                        </ul>
+                    );
+                })
+            }
         </section>
     )
 }

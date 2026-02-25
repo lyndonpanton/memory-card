@@ -20,11 +20,11 @@
     list-style-type: none;
 }
 
-.data-links-legal {
+.data-links-list:first-child {
     justify-content: start;
 }
 
-.data-links-social {
+.data-links-list:last-child {
     justify-content: end;
 }
 

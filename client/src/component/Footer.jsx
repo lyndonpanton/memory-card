@@ -1,3 +1,7 @@
+import twitterIcon from "../asset/icon/twitter.svg";
+import instagramIcon from "../asset/icon/instagram.svg";
+import facebookIcon from "../asset/icon/facebook.svg";
+
 import "../styles/Footer.css";
 
 import ProjectLinks from "./ProjectLinks.jsx";
@@ -84,6 +88,61 @@ function Footer() {
         }
     ];
 
+    const DATA_INFORMATION = [
+        {
+            title: "legal",
+            data: [
+                {
+                    title: "Privacy Policy",
+                    link: "https://en.wikipedia.org/wiki/Privacy_policy",
+                    newTab: true,
+                    usesIcon: false,
+                    icon: null
+                },
+                {
+                    title: "Cookies",
+                    link: "https://en.wikipedia.org/wiki/HTTP_cookie",
+                    newTab: true,
+                    usesIcon: false,
+                    icon: null
+                },
+                {
+                    title: "Terms and Conditions",
+                    link: "https://en.wikipedia.org/wiki/Contractual_term",
+                    newTab: true,
+                    usesIcon: false,
+                    icon: null
+                }
+            ],
+        },
+        {
+            title: "social",
+            data: [
+                {
+                    title: "Twitter",
+                    link: "https://twitter.com",
+                    newTab: true,
+                    usesIcon: true,
+                    icon: twitterIcon
+                },
+                {
+                    title: "Instagram",
+                    link: "https://www.instagram.com/",
+                    newTab: true,
+                    usesIcon: true,
+                    icon: instagramIcon
+                },
+                {
+                    title: "Facebook",
+                    link: "https://www.facebook.com/",
+                    newTab: true,
+                    usesIcon: true,
+                    icon: facebookIcon
+                }
+            ]
+        }
+    ];
+
     const COPYRIGHT_YEAR = new Date().getFullYear();
     const COPYRIGHT_RIGHTS_HOLDER = "Lyndon Mykal Panton";
     const COPYRIGHT_RIGHTS_TYPE = "All Rights Reserved";
@@ -91,7 +150,7 @@ function Footer() {
     return (
         <footer>
             <ProjectLinks data={ PROJECT_INFORMATION } />
-            <DataLinks />
+            <DataLinks data={ DATA_INFORMATION } />
             <Copyright
                 year={ COPYRIGHT_YEAR }
                 rightsHolder={ COPYRIGHT_RIGHTS_HOLDER }
