@@ -37,7 +37,7 @@ function Dialog({ isInPlay, hasWon, hasLost, gameSummary }) {
                         summary.map(function (pick, index) {
                             if (index === summary.length - 1) {
                                 return (
-                                    hasWon
+                                    !hasWon
                                     ?
                                         <span>
                                             <span className={ "dialog-summary-item dialog-summary-item-duplicate" }>
@@ -53,18 +53,20 @@ function Dialog({ isInPlay, hasWon, hasLost, gameSummary }) {
                                 );
                             } else if (pick === summary[summary.length - 1]) {
                                 return (
-                                    hasWon
+                                    !hasWon
                                     ?
                                         <span>
                                             <span className={ "dialog-summary-item dialog-summary-item-duplicate" }>
                                                 { pick }
                                             </span>
+                                            <span className={ "dialog-summary-item dialog-summary-item-dividier"}> &gt; </span>
                                         </span>
                                     :
                                         <span>
                                             <span className={ "dialog-summary-item" }>
                                                 { pick }
                                             </span>
+                                                <span className={ "dialog-summary-item dialog-summary-item-dividier"}> &gt; </span>
                                         </span>
                                 );
                             }
