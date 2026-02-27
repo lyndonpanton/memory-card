@@ -16,7 +16,12 @@
 
 /* Laptop */
 @media screen and (min-width: 620px) {
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
 
+        padding: 10px 20px;
+    }
 }
 
 /* Desktop */
