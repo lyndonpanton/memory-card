@@ -26,6 +26,11 @@
 ### Styling
 
 - [ ] Change font family
+- [ ] Media screens
+    - [x] Optimise for mobile devices
+    - [ ] Optimise for tablet devices
+    - [ ] Optimise for laptop devices
+    - [ ] Optimise for desktop devices
 
 ### Functionality
 
