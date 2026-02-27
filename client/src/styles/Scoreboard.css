@@ -46,7 +46,13 @@
 
 /* Laptop */
 @media screen and (min-width: 620px) {
+    .scoreboard {
+        margin: 15px auto;
+        border-width: 5px;
+        padding: 15px 0;
 
+        font-size: 1.4rem;
+    }
 }
 
 /* Desktop */
