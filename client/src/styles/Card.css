@@ -52,7 +52,19 @@
 
 /* Laptop */
 @media screen and (min-width: 620px) {
+    .card {
+        border-width: 3px;
+        min-width: 90px;
+        min-height: 90px;
+    }
 
+    .card-sprite {
+        width: 60px;
+    }
+
+    .card-name {
+        font-size: 1rem;
+    }
 }
 
 /* Desktop */
