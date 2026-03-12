@@ -151,6 +151,7 @@ function Cards({
                                 cardData={ cardData }
                                 isInPlay={ isInPlay }
                                 setIsInPlay={ setIsInPlay }
+                                hasWon={ hasWon }
                                 setHasWon={ setHasWon }
                                 setHasLost={ setHasLost }
                                 isActive={ isActive }

@@ -21,11 +21,9 @@
     text-align: center;
 }
 
-.card-selected {
+.card-selected-win {
     border-color: green;
-    background-color: darkgreen;
-
-    transition: all linear 1.25s;
+    background-color: darkgreen !important;
 }
 
 .card-selected-repeat {

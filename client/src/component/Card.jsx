@@ -6,6 +6,7 @@ function Card({
     cardData,
     isInPlay,
     setIsInPlay,
+    hasWon,
     setHasWon,
     setHasLost,
     isActive,
@@ -69,7 +70,13 @@ function Card({
 
     return (
         <article
-                className={ isValidPick ? "card" : "card-selected-repeat card" }
+                className={
+                    hasWon
+                        ? "card card-selected-win"
+                        : isValidPick
+                            ? "card"
+                            : "card card-selected-repeat"
+                }
                 key={ cardData.id }
                 dataid={ cardData.id }
                 onClick={ (e) => handleCardClick(e) }>
