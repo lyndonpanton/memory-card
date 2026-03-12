@@ -27,7 +27,7 @@ function Cards({
     const [typeId, setTypeId] = useState(1);
     const [isActive, setIsActive] = useState(true);
 
-    const NUMBER_OF_CARDS = 15;
+    const NUMBER_OF_CARDS = 16;
     
     useEffect(createGame, []);
 

@@ -26,6 +26,7 @@
 ### Styling
 
 - [ ] Change font family
+- [ ] Highlight incorrect card pick
 - [ ] Media screens
     - [x] Optimise for mobile devices
     - [ ] Optimise for tablet devices
