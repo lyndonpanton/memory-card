@@ -30,7 +30,7 @@
 
 .card-selected-repeat {
     border-color: red;
-    background-color: darkred;
+    background-color: darkred !important;
 }
 
 /* Mobile */

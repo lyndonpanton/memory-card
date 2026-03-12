@@ -20,6 +20,7 @@ function Card({
     numberOfCards
 }) {
     const [isChosen, setIsChosen] = useState(false);
+    const [isValidPick, setIsValidPick] = useState(true);
 
     function handleCardClick(e) {
         if (isInPlay) {
@@ -27,6 +28,7 @@ function Card({
                 // game over
                 setIsInPlay(false);
                 setHasLost(true);
+                setIsValidPick(false);
                 setGameSummary([...gameSummary, cardData.name]);
             } else {
                 // if (isActive) {
@@ -67,7 +69,7 @@ function Card({
 
     return (
         <article
-                className="card"
+                className={ isValidPick ? "card" : "card-selected-repeat card" }
                 key={ cardData.id }
                 dataid={ cardData.id }
                 onClick={ (e) => handleCardClick(e) }>

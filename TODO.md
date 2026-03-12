@@ -29,9 +29,9 @@
 - [ ] Highlight incorrect card pick
 - [ ] Media screens
     - [x] Optimise for mobile devices
-    - [ ] Optimise for tablet devices
-    - [ ] Optimise for laptop devices
-    - [ ] Optimise for desktop devices
+    - [x] Optimise for tablet devices
+    - [x] Optimise for laptop devices
+    - [x] Optimise for desktop devices
 
 ### Functionality
 
