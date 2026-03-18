@@ -22,18 +22,22 @@
         - [x] Summary of selections
     - [x] If game has been won
         - [x] Summary of selections
+- [ ] Audio toggle component
 
 ### Styling
 
 - [ ] Change font family
-- [ ] Highlight incorrect card pick
-- [ ] Media screens
+- [x] Highlight incorrect card pick
+- [x] Highlight all cards on win
+- [x] Media screens
     - [x] Optimise for mobile devices
     - [x] Optimise for tablet devices
     - [x] Optimise for laptop devices
     - [x] Optimise for desktop devices
 
 ### Functionality
+
+- [ ] Audio toggle component should be able to mute or unmute sound effects
 
 ### Routing
 
@@ -61,7 +65,7 @@ it
 - [x] Selecting a Card in the same position as a previously selected Card causes
 the game to be over, instead of select a Card that is the same (e.g., name,
 image) as a previously selected card
-    - **Needed to set the key of the Card components in map**
+    - **Resolved by setting the key of the Card components in map callback**
 
 ## Notes
 

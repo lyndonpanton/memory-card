@@ -5,6 +5,10 @@
     list-style-type: none;
 }
 
+.project-link-list-title {
+    text-decoration: underline;
+}
+
 .project-link-list-link {
     color: white;
     text-decoration: none;

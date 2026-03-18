@@ -70,6 +70,7 @@ previously
     - [Twitter icon](https://fontawesome.com/icons/twitter?f=brands&s=solid)
     - [Instagram icon](https://fontawesome.com/icons/square-instagram?f=brands&s=solid)
     - [Facebook icon](https://fontawesome.com/icons/facebook?f=brands&s=solid)
+- [Font family (Gros Ventre by Dimitri Antonov)](https://justfreefonts.com/fonts/gros-ventre/)
 
 ## References
 

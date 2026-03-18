@@ -1,5 +1,11 @@
+@font-face {
+    font-family: "Gros Ventre";
+    src: url("../asset/font/gros-ventre/Gros\ Ventre\ Regular.ttf")
+}
+
 * {
     box-sizing: border-box;
+    font-family: "Gros Ventre";
 }
 
 :root {
