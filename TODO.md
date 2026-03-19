@@ -23,10 +23,11 @@
     - [x] If game has been won
         - [x] Summary of selections
 - [ ] Audio toggle component
+- [ ] Use a background image
 
 ### Styling
 
-- [ ] Change font family
+- [x] Change font family
 - [x] Highlight incorrect card pick
 - [x] Highlight all cards on win
 - [x] Media screens
@@ -68,6 +69,8 @@ image) as a previously selected card
     - **Resolved by setting the key of the Card components in map callback**
 
 ## Notes
+
+- See GitHub starred repositories for design inspiration (19/03/26)
 
 ## Credits
 
